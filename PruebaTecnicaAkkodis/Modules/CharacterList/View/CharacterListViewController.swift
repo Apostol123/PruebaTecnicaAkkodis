@@ -33,6 +33,7 @@ class CharacterListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        presenter.viewDidLoad()
     }
 }
 

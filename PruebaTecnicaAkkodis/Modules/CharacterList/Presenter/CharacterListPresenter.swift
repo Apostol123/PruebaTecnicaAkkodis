@@ -12,4 +12,14 @@ class CharacterListPresenter {
 }
 
 extension CharacterListPresenter: CharacterListPresenterProtocol {
+    func viewDidLoad() {
+        interactor.getCharacters { result in
+            switch result {
+            case .success(let success):
+                print(success)
+            case .failure(let failure):
+                print(failure)
+            }
+        }
+    }
 }
