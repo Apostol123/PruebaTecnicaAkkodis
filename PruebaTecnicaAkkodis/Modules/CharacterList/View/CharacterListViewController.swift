@@ -33,11 +33,24 @@ class CharacterListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        setUpTableViewLayout()
         presenter.viewDidLoad()
+    }
+    
+    private func setUpTableViewLayout() {
+        view.addSubview(tableView)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
+        tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
+        tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0).isActive = true
     }
 }
 
 extension CharacterListViewController: CharacterListViewProtocol {
+    func layout(with character: [Character]) {
+        content = character
+    }
 }
 
 extension CharacterListViewController: UITableViewDataSource, UITableViewDelegate {
@@ -48,7 +61,7 @@ extension CharacterListViewController: UITableViewDataSource, UITableViewDelegat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = content[indexPath.row]
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CharacterListTableViewCell.identifier, for: indexPath) as?  CharacterListTableViewCell else {return UITableViewCell()}
-        cell.configure(titleDescription: item.name, description: item.type, imageURL: item.image)
+        cell.configure(titleDescription: item.name, description: item.species.rawValue, imageURL: item.image)
         return cell
     }
     

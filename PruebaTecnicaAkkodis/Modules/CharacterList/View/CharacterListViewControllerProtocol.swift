@@ -1,4 +1,5 @@
 import UIKit
 
-protocol CharacterListViewProtocol: AnyObject {
+protocol CharacterListViewProtocol: Loader {
+    func layout(with character: [Character])
 }

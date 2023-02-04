@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9D79D5A4298E61670048F80E /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 9D79D5A3298E61670048F80E /* SDWebImage */; };
 		9D79D5A7298E64A50048F80E /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D79D5A6298E64A50048F80E /* Endpoint.swift */; };
+		9D79D5AB298E65CC0048F80E /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D79D5AA298E65CC0048F80E /* Loader.swift */; };
 		9DA9384A298E520B005A9B66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA93849298E520B005A9B66 /* AppDelegate.swift */; };
 		9DA9384C298E520B005A9B66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA9384B298E520B005A9B66 /* SceneDelegate.swift */; };
 		9DA93853298E520D005A9B66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DA93852298E520D005A9B66 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		9D79D5A6298E64A50048F80E /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		9D79D5AA298E65CC0048F80E /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		9DA93846298E520B005A9B66 /* PruebaTecnicaAkkodis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PruebaTecnicaAkkodis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DA93849298E520B005A9B66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DA9384B298E520B005A9B66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,23 @@
 				9D79D5A6298E64A50048F80E /* Endpoint.swift */,
 			);
 			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		9D79D5A8298E65B30048F80E /* Architecture */ = {
+			isa = PBXGroup;
+			children = (
+				9DA9387B298E588E005A9B66 /* Coordinator.swift */,
+				9DA93879298E5766005A9B66 /* Builder.swift */,
+			);
+			path = Architecture;
+			sourceTree = "<group>";
+		};
+		9D79D5A9298E65C10048F80E /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				9D79D5AA298E65CC0048F80E /* Loader.swift */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 		9DA9383D298E520A005A9B66 = {
@@ -181,8 +200,8 @@
 		9DA93878298E575B005A9B66 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				9DA93879298E5766005A9B66 /* Builder.swift */,
-				9DA9387B298E588E005A9B66 /* Coordinator.swift */,
+				9D79D5A9298E65C10048F80E /* Layout */,
+				9D79D5A8298E65B30048F80E /* Architecture */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -318,6 +337,7 @@
 				9DA93889298E5EB7005A9B66 /* CharacterListTableViewCell.swift in Sources */,
 				9DA93870298E5521005A9B66 /* CharacterListDataManagerProtocol.swift in Sources */,
 				9DA93869298E5521005A9B66 /* CharacterListInteractorProtocol.swift in Sources */,
+				9D79D5AB298E65CC0048F80E /* Loader.swift in Sources */,
 				9DA9386C298E5521005A9B66 /* CharacterListPresenterProtocol.swift in Sources */,
 				9DA9384A298E520B005A9B66 /* AppDelegate.swift in Sources */,
 				9DA9386D298E5521005A9B66 /* CharacterListViewController.swift in Sources */,

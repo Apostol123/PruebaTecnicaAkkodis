@@ -13,10 +13,12 @@ class CharacterListPresenter {
 
 extension CharacterListPresenter: CharacterListPresenterProtocol {
     func viewDidLoad() {
-        interactor.getCharacters { result in
+        view?.showLoader()
+        interactor.getCharacters {[weak self] result in
+            self?.view?.hideLoader()
             switch result {
             case .success(let success):
-                print(success)
+                self?.view?.layout(with: success.results)
             case .failure(let failure):
                 print(failure)
             }
