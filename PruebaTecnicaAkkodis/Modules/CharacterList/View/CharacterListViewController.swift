@@ -35,6 +35,7 @@ class CharacterListViewController: UIViewController {
         view.backgroundColor = .white
         setUpTableViewLayout()
         presenter.viewDidLoad()
+        self.title = "lng.characterList.viewController.title".localized
     }
     
     private func setUpTableViewLayout() {
