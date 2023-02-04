@@ -24,6 +24,8 @@
 		9DA9387A298E5766005A9B66 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA93879298E5766005A9B66 /* Builder.swift */; };
 		9DA9387C298E588E005A9B66 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA9387B298E588E005A9B66 /* Coordinator.swift */; };
 		9DA9387F298E58B7005A9B66 /* CharacterModuleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA9387E298E58B7005A9B66 /* CharacterModuleCoordinator.swift */; };
+		9DA93882298E5C53005A9B66 /* ServiceProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA93881298E5C53005A9B66 /* ServiceProxy.swift */; };
+		9DA93885298E5D9E005A9B66 /* DtoCharacterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA93884298E5D9E005A9B66 /* DtoCharacterList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		9DA93879298E5766005A9B66 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		9DA9387B298E588E005A9B66 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		9DA9387E298E58B7005A9B66 /* CharacterModuleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModuleCoordinator.swift; sourceTree = "<group>"; };
+		9DA93881298E5C53005A9B66 /* ServiceProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProxy.swift; sourceTree = "<group>"; };
+		9DA93884298E5D9E005A9B66 /* DtoCharacterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoCharacterList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,7 @@
 		9DA93848298E520B005A9B66 /* PruebaTecnicaAkkodis */ = {
 			isa = PBXGroup;
 			children = (
+				9DA93880298E5C46005A9B66 /* Network */,
 				9DA9387D298E58A5005A9B66 /* Coordinators */,
 				9DA93878298E575B005A9B66 /* Utils */,
 				9DA9385D298E542E005A9B66 /* Modules */,
@@ -172,6 +177,23 @@
 			path = Coordinators;
 			sourceTree = "<group>";
 		};
+		9DA93880298E5C46005A9B66 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9DA93883298E5D84005A9B66 /* Entities */,
+				9DA93881298E5C53005A9B66 /* ServiceProxy.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		9DA93883298E5D84005A9B66 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				9DA93884298E5D9E005A9B66 /* DtoCharacterList.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -242,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DA93882298E5C53005A9B66 /* ServiceProxy.swift in Sources */,
 				9DA9386A298E5521005A9B66 /* CharacterListPresenter.swift in Sources */,
 				9DA93870298E5521005A9B66 /* CharacterListDataManagerProtocol.swift in Sources */,
 				9DA93869298E5521005A9B66 /* CharacterListInteractorProtocol.swift in Sources */,
@@ -254,6 +277,7 @@
 				9DA9387F298E58B7005A9B66 /* CharacterModuleCoordinator.swift in Sources */,
 				9DA9386B298E5521005A9B66 /* CharacterListViewControllerProtocol.swift in Sources */,
 				9DA9384C298E520B005A9B66 /* SceneDelegate.swift in Sources */,
+				9DA93885298E5D9E005A9B66 /* DtoCharacterList.swift in Sources */,
 				9DA93871298E5521005A9B66 /* CharacterListOutput.swift in Sources */,
 				9DA9386F298E5521005A9B66 /* CharacterListInteractor.swift in Sources */,
 				9DA93872298E5521005A9B66 /* CharacterListDataManager.swift in Sources */,
