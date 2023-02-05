@@ -71,5 +71,6 @@ extension CharacterListViewController: UITableViewDataSource, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = content[indexPath.row]
+        presenter.didSelectCharacter(id: item.id)
     }
 }

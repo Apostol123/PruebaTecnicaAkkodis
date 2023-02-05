@@ -1,4 +1,4 @@
 import UIKit
 
-protocol CharacterDetailViewProtocol: AnyObject {
+protocol CharacterDetailViewProtocol: Loader {
 }

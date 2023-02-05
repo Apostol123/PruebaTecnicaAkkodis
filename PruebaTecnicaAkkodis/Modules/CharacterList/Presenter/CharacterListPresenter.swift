@@ -24,4 +24,8 @@ extension CharacterListPresenter: CharacterListPresenterProtocol {
             }
         }
     }
+    
+    func didSelectCharacter(id: Int) {
+        coordinatorOutput(.goToCharacterList(id: id))
+    }
 }
