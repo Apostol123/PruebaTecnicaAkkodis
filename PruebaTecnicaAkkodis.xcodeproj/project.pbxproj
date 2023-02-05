@@ -22,6 +22,8 @@
 		9D79D5E3298FABAA0048F80E /* CharacterDetailDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D79D5D9298FABAA0048F80E /* CharacterDetailDataManagerProtocol.swift */; };
 		9D79D5E4298FABAA0048F80E /* CharacterDetailOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D79D5DA298FABAA0048F80E /* CharacterDetailOutput.swift */; };
 		9D79D5E5298FABAA0048F80E /* CharacterDetailDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D79D5DB298FABAA0048F80E /* CharacterDetailDataManager.swift */; };
+		9D79D5EC298FB76F0048F80E /* CharacterEpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D79D5EB298FB76F0048F80E /* CharacterEpisodeTableViewCell.swift */; };
+		9D79D5EE298FC0100048F80E /* CharacterEpisode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D79D5ED298FC0100048F80E /* CharacterEpisode.swift */; };
 		9DA9384A298E520B005A9B66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA93849298E520B005A9B66 /* AppDelegate.swift */; };
 		9DA9384C298E520B005A9B66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA9384B298E520B005A9B66 /* SceneDelegate.swift */; };
 		9DA93853298E520D005A9B66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DA93852298E520D005A9B66 /* Assets.xcassets */; };
@@ -62,6 +64,8 @@
 		9D79D5D9298FABAA0048F80E /* CharacterDetailDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailDataManagerProtocol.swift; sourceTree = "<group>"; };
 		9D79D5DA298FABAA0048F80E /* CharacterDetailOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailOutput.swift; sourceTree = "<group>"; };
 		9D79D5DB298FABAA0048F80E /* CharacterDetailDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailDataManager.swift; sourceTree = "<group>"; };
+		9D79D5EB298FB76F0048F80E /* CharacterEpisodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterEpisodeTableViewCell.swift; sourceTree = "<group>"; };
+		9D79D5ED298FC0100048F80E /* CharacterEpisode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterEpisode.swift; sourceTree = "<group>"; };
 		9DA93846298E520B005A9B66 /* PruebaTecnicaAkkodis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PruebaTecnicaAkkodis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DA93849298E520B005A9B66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DA9384B298E520B005A9B66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				9D79D5A6298E64A50048F80E /* Endpoint.swift */,
+				9D79D5ED298FC0100048F80E /* CharacterEpisode.swift */,
 			);
 			path = Endpoint;
 			sourceTree = "<group>";
@@ -338,6 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				9DA93888298E5EB7005A9B66 /* CharacterListTableViewCell.swift */,
+				9D79D5EB298FB76F0048F80E /* CharacterEpisodeTableViewCell.swift */,
 			);
 			path = UITableViewCells;
 			sourceTree = "<group>";
@@ -429,6 +435,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D79D5E5298FABAA0048F80E /* CharacterDetailDataManager.swift in Sources */,
+				9D79D5EE298FC0100048F80E /* CharacterEpisode.swift in Sources */,
 				9D79D5E4298FABAA0048F80E /* CharacterDetailOutput.swift in Sources */,
 				9DA93882298E5C53005A9B66 /* ServiceProxy.swift in Sources */,
 				9DA9386A298E5521005A9B66 /* CharacterListPresenter.swift in Sources */,
@@ -445,6 +452,7 @@
 				9DA9386D298E5521005A9B66 /* CharacterListViewController.swift in Sources */,
 				9DA9387C298E588E005A9B66 /* Coordinator.swift in Sources */,
 				9D79D5DC298FABAA0048F80E /* CharacterDetailInteractorProtocol.swift in Sources */,
+				9D79D5EC298FB76F0048F80E /* CharacterEpisodeTableViewCell.swift in Sources */,
 				9DA9386E298E5521005A9B66 /* CharacterListBuilder.swift in Sources */,
 				9DA9387A298E5766005A9B66 /* Builder.swift in Sources */,
 				9DA9387F298E58B7005A9B66 /* CharacterModuleCoordinator.swift in Sources */,

@@ -1,3 +1,7 @@
 "lng.characterList.viewController.title" = "Characters";
 "lng.character.name" = "Name: @";
 "lng.character.species" = "species: @";
+"lng.common.episodes" = "Episodes";
+"lng.common.name" = "Name: @";
+"lng.common.airdate" = "Airdate: @";
+"lng.common.chapter.number" = "Chapter number: @";

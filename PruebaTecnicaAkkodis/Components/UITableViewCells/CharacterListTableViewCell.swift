@@ -79,6 +79,5 @@ class CharacterListTableViewCell: UITableViewCell {
         descriptionLabel.text = description
         subtitleLabel.isHidden = description.isEmpty
         mainImage.sd_setImage(with: URL(string: imageURL), placeholderImage: nil)
-        
     }
 }

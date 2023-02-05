@@ -16,12 +16,24 @@ class CharacterDetailPresenter {
 extension CharacterDetailPresenter: CharacterDetailPresenterProtocol {
     func viewDidLoad() {
         view?.showLoader()
-        interactor.getCharacters(characterId: characterId) { result in
+        interactor.getCharacter(characterId: characterId) {[weak self] result in
+            self?.view?.hideLoader()
             switch result {
-            case .success(let success):
-                print(success)
+            case .success(let character):
+                self?.view?.layout(with: character)
             case .failure(let failure):
                 print(failure)
+            }
+        }
+    }
+    
+    func loadCellEpisodeData(for url: String, completion: @escaping (CharacterEpisode) -> Void) {
+        interactor.getEpisode(url: url) { result in
+            switch result {
+            case .success(let episode):
+                completion(episode)
+            case .failure(_):
+                break
             }
         }
     }
