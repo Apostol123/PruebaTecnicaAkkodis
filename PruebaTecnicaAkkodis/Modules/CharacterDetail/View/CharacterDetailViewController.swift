@@ -7,6 +7,7 @@ class CharacterDetailViewController: UIViewController {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+                self.tableView.scrollToRow(at: IndexPath(item: 0, section: 0), at: .bottom, animated: true)
             }
         }
     }
@@ -53,7 +54,6 @@ class CharacterDetailViewController: UIViewController {
         setUpMainStackViewLayout()
         presenter.viewDidLoad()
         view.backgroundColor = .white
-        tableView.scrollsToTop = true
     }
     
     private func setUpMainStackViewLayout() {
