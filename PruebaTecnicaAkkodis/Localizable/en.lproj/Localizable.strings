@@ -1,1 +1,3 @@
 "lng.characterList.viewController.title" = "Characters";
+"lng.character.name" = "Name: @";
+"lng.character.species" = "species: @";

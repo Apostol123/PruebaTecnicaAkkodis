@@ -62,7 +62,10 @@ extension CharacterListViewController: UITableViewDataSource, UITableViewDelegat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = content[indexPath.row]
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CharacterListTableViewCell.identifier, for: indexPath) as?  CharacterListTableViewCell else {return UITableViewCell()}
-        cell.configure(titleDescription: item.name, description: item.species.rawValue, imageURL: item.image)
+        cell.configure(
+            titleDescription: "lng.character.name".localized.replacingOccurrences(of: "@", with: item.name),
+            description:  "lng.character.species".localized.replacingOccurrences(of: "@", with: item.species.rawValue),
+            imageURL: item.image)
         return cell
     }
     
