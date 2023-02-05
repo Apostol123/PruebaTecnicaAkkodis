@@ -24,6 +24,7 @@
 		9D79D5E5298FABAA0048F80E /* CharacterDetailDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D79D5DB298FABAA0048F80E /* CharacterDetailDataManager.swift */; };
 		9D79D5EC298FB76F0048F80E /* CharacterEpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D79D5EB298FB76F0048F80E /* CharacterEpisodeTableViewCell.swift */; };
 		9D79D5EE298FC0100048F80E /* CharacterEpisode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D79D5ED298FC0100048F80E /* CharacterEpisode.swift */; };
+		9D79D5F0298FCC310048F80E /* ContentSizedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D79D5EF298FCC310048F80E /* ContentSizedTableView.swift */; };
 		9DA9384A298E520B005A9B66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA93849298E520B005A9B66 /* AppDelegate.swift */; };
 		9DA9384C298E520B005A9B66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA9384B298E520B005A9B66 /* SceneDelegate.swift */; };
 		9DA93853298E520D005A9B66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DA93852298E520D005A9B66 /* Assets.xcassets */; };
@@ -66,6 +67,7 @@
 		9D79D5DB298FABAA0048F80E /* CharacterDetailDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailDataManager.swift; sourceTree = "<group>"; };
 		9D79D5EB298FB76F0048F80E /* CharacterEpisodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterEpisodeTableViewCell.swift; sourceTree = "<group>"; };
 		9D79D5ED298FC0100048F80E /* CharacterEpisode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterEpisode.swift; sourceTree = "<group>"; };
+		9D79D5EF298FCC310048F80E /* ContentSizedTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSizedTableView.swift; sourceTree = "<group>"; };
 		9DA93846298E520B005A9B66 /* PruebaTecnicaAkkodis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PruebaTecnicaAkkodis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DA93849298E520B005A9B66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DA9384B298E520B005A9B66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				9D79D5AA298E65CC0048F80E /* Loader.swift */,
+				9D79D5EF298FCC310048F80E /* ContentSizedTableView.swift */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 				9D79D5A7298E64A50048F80E /* Endpoint.swift in Sources */,
 				9DA9384C298E520B005A9B66 /* SceneDelegate.swift in Sources */,
 				9DA93885298E5D9E005A9B66 /* DtoCharacterList.swift in Sources */,
+				9D79D5F0298FCC310048F80E /* ContentSizedTableView.swift in Sources */,
 				9D79D5DE298FABAA0048F80E /* CharacterDetailViewControllerProtocol.swift in Sources */,
 				9DA93871298E5521005A9B66 /* CharacterListOutput.swift in Sources */,
 				9D79D5DF298FABAA0048F80E /* CharacterDetailPresenterProtocol.swift in Sources */,
