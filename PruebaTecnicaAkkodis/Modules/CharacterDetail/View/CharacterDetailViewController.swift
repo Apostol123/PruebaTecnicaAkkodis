@@ -3,7 +3,7 @@ import SDWebImage
 
 class CharacterDetailViewController: UIViewController {
     private let presenter: CharacterDetailPresenterProtocol
-    private var episodes: [String] = [] {
+    private var episdodeURL: [String] = [] {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -11,6 +11,8 @@ class CharacterDetailViewController: UIViewController {
             }
         }
     }
+    
+    private var episodes: [CharacterEpisode] = []
     
     private lazy var characterImage: UIImageView = {
         let image = UIImageView()
@@ -75,7 +77,7 @@ class CharacterDetailViewController: UIViewController {
 extension CharacterDetailViewController: CharacterDetailViewProtocol {
     func layout(with character: Character) {
         characterImage.sd_setImage(with:  URL(string: character.image))
-        episodes = character.episode
+        episdodeURL = character.episode
         setTitle(with: character.name)
     }
 }
@@ -83,18 +85,32 @@ extension CharacterDetailViewController: CharacterDetailViewProtocol {
 
 extension CharacterDetailViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return episodes.count
+        return episdodeURL.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CharacterEpisodeTableViewCell.id , for: indexPath) as! CharacterEpisodeTableViewCell
-        let episode = episodes[indexPath.row]
-        presenter.loadCellEpisodeData(for: episode) { episode in
-            DispatchQueue.main.async {
-                let episodeName = "lng.common.name".localized.replacingOccurrences(of: "@", with: episode.name)
-                let airdate = "lng.common.airdate".localized.replacingOccurrences(of: "@", with: episode.airDate)
-                let episodeNumber = "lng.common.chapter.number".localized.replacingOccurrences(of: "@", with: episode.episode)
-                cell.configure(name: episodeName, airdate: airdate, episode: episodeNumber)
+        let episodeURL = episdodeURL[indexPath.row]
+        
+        if !episodes.isEmpty, episodes.count > indexPath.row {
+            let episode = episodes[indexPath.row]
+            let episodeName = "lng.common.name".localized.replacingOccurrences(of: "@", with: episode.name)
+            let airdate = "lng.common.airdate".localized.replacingOccurrences(of: "@", with: episode.airDate)
+            let episodeNumber = "lng.common.chapter.number".localized.replacingOccurrences(of: "@", with: episode.episode)
+            cell.configure(name: episodeName, airdate: airdate, episode: episodeNumber)
+        } else {
+            
+            presenter.loadCellEpisodeData(for: episodeURL) { episode in
+                DispatchQueue.main.async {
+                    let episodeName = "lng.common.name".localized.replacingOccurrences(of: "@", with: episode.name)
+                    let airdate = "lng.common.airdate".localized.replacingOccurrences(of: "@", with: episode.airDate)
+                    let episodeNumber = "lng.common.chapter.number".localized.replacingOccurrences(of: "@", with: episode.episode)
+                    cell.configure(name: episodeName, airdate: airdate, episode: episodeNumber)
+                    if !self.episodes.contains(where: {$0.id == episode.id}) {
+                        self.episodes.append(episode)
+                        tableView.reloadData()
+                    }
+                }
             }
         }
         return cell
@@ -108,12 +124,20 @@ extension CharacterDetailViewController: UITableViewDataSource, UITableViewDeleg
 extension CharacterDetailViewController: UITableViewDataSourcePrefetching {
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
         for indexPath in indexPaths {
-            let episode = episodes[indexPath.row]
-            presenter.loadCellEpisodeData(for: episode) { episode in
+            let episodeURL = episdodeURL[indexPath.row]
+            presenter.loadCellEpisodeData(for: episodeURL) { episode in
                 DispatchQueue.main.async {
-                    self.tableView.reloadRows(at: [indexPath], with: .fade)
+                    if !self.episodes.contains(where: {$0.id == episode.id}) {
+                        self.tableView.reloadRows(at: [indexPath], with: .fade)
+                    }
                 }
             }
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
+        indexPaths.forEach {[weak self] in
+            self?.presenter.cancelTask(for: episdodeURL[$0.row])
         }
     }
 }

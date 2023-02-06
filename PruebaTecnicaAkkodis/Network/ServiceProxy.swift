@@ -11,6 +11,7 @@ public enum APIError: Error {
 class ServiceProxy {
     
     private let session: URLSession
+    private var tasks = [URLSessionTask]()
     
     init() {
         self.session = .shared
@@ -57,5 +58,20 @@ class ServiceProxy {
         }
         
         task.resume()
+        tasks.append(task)
+    }
+    
+    func cancelTask(for url: String) {
+        guard let taskIndex = tasks.firstIndex(where: { $0.originalRequest?.url == URL(string: url) }) else {
+            return
+        }
+        let task = tasks[taskIndex]
+        task.cancel()
+        tasks.remove(at: taskIndex)
+    }
+    
+    func shouldPerformTask(for url: String) -> Bool {
+        tasks.firstIndex(where: { $0.originalRequest?.url == URL(string: url) }) == nil
     }
 }
+

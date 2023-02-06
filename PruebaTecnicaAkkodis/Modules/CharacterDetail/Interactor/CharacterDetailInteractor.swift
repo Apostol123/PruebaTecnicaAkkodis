@@ -28,4 +28,8 @@ class CharacterDetailInteractor: CharacterDetailInteractorProtocol {
             }
         }
     }
+    
+    func cancelTask(for url: String) {
+        dataManager.cancelTask(for: url)
+    }
 }

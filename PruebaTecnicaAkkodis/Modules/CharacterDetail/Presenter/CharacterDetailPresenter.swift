@@ -37,4 +37,8 @@ extension CharacterDetailPresenter: CharacterDetailPresenterProtocol {
             }
         }
     }
+    
+    func cancelTask(for url: String) {
+        interactor.cancelTask(for: url)
+    }
 }
