@@ -18,9 +18,9 @@ extension CharacterListPresenter: CharacterListPresenterProtocol {
             self?.view?.hideLoader()
             switch result {
             case .success(let success):
-                self?.view?.layout(with: success.results)
-            case .failure(let failure):
-                print(failure)
+                success.results.isEmpty ? self?.view?.addNoDataView(description: nil) :  self?.view?.layout(with: success.results)
+            case .failure(_):
+                self?.view?.addNoDataView(description: nil)
             }
         }
     }

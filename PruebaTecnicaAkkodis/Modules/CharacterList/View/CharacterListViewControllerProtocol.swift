@@ -1,5 +1,5 @@
 import UIKit
 
-protocol CharacterListViewProtocol: Loader {
+protocol CharacterListViewProtocol: Loader, NoDataLayout {
     func layout(with character: [Character])
 }

@@ -45,6 +45,8 @@
 		9DA93882298E5C53005A9B66 /* ServiceProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA93881298E5C53005A9B66 /* ServiceProxy.swift */; };
 		9DA93885298E5D9E005A9B66 /* DtoCharacterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA93884298E5D9E005A9B66 /* DtoCharacterList.swift */; };
 		9DA93889298E5EB7005A9B66 /* CharacterListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA93888298E5EB7005A9B66 /* CharacterListTableViewCell.swift */; };
+		9DCC04902991AD0E008930D1 /* NoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCC048F2991AD0E008930D1 /* NoDataView.swift */; };
+		9DCC04922991AE0B008930D1 /* SetupNoDataViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCC04912991AE0B008930D1 /* SetupNoDataViewLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +91,8 @@
 		9DA93881298E5C53005A9B66 /* ServiceProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProxy.swift; sourceTree = "<group>"; };
 		9DA93884298E5D9E005A9B66 /* DtoCharacterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoCharacterList.swift; sourceTree = "<group>"; };
 		9DA93888298E5EB7005A9B66 /* CharacterListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListTableViewCell.swift; sourceTree = "<group>"; };
+		9DCC048F2991AD0E008930D1 /* NoDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataView.swift; sourceTree = "<group>"; };
+		9DCC04912991AE0B008930D1 /* SetupNoDataViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupNoDataViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,7 @@
 			children = (
 				9D79D5AA298E65CC0048F80E /* Loader.swift */,
 				9D79D5EF298FCC310048F80E /* ContentSizedTableView.swift */,
+				9DCC04912991AE0B008930D1 /* SetupNoDataViewLayout.swift */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -334,6 +339,7 @@
 		9DA93886298E5E8E005A9B66 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				9DCC048D2991ACF9008930D1 /* UIViews */,
 				9DA93887298E5E98005A9B66 /* UITableViewCells */,
 			);
 			path = Components;
@@ -346,6 +352,22 @@
 				9D79D5EB298FB76F0048F80E /* CharacterEpisodeTableViewCell.swift */,
 			);
 			path = UITableViewCells;
+			sourceTree = "<group>";
+		};
+		9DCC048D2991ACF9008930D1 /* UIViews */ = {
+			isa = PBXGroup;
+			children = (
+				9DCC048E2991AD03008930D1 /* NoDataView */,
+			);
+			path = UIViews;
+			sourceTree = "<group>";
+		};
+		9DCC048E2991AD03008930D1 /* NoDataView */ = {
+			isa = PBXGroup;
+			children = (
+				9DCC048F2991AD0E008930D1 /* NoDataView.swift */,
+			);
+			path = NoDataView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,6 +458,7 @@
 				9DA93889298E5EB7005A9B66 /* CharacterListTableViewCell.swift in Sources */,
 				9DA93870298E5521005A9B66 /* CharacterListDataManagerProtocol.swift in Sources */,
 				9DA93869298E5521005A9B66 /* CharacterListInteractorProtocol.swift in Sources */,
+				9DCC04902991AD0E008930D1 /* NoDataView.swift in Sources */,
 				9D79D5AB298E65CC0048F80E /* Loader.swift in Sources */,
 				9D79D5E0298FABAA0048F80E /* CharacterDetailViewController.swift in Sources */,
 				9DA9386C298E5521005A9B66 /* CharacterListPresenterProtocol.swift in Sources */,
@@ -444,6 +467,7 @@
 				9DA9386D298E5521005A9B66 /* CharacterListViewController.swift in Sources */,
 				9DA9387C298E588E005A9B66 /* Coordinator.swift in Sources */,
 				9D79D5DC298FABAA0048F80E /* CharacterDetailInteractorProtocol.swift in Sources */,
+				9DCC04922991AE0B008930D1 /* SetupNoDataViewLayout.swift in Sources */,
 				9D79D5EC298FB76F0048F80E /* CharacterEpisodeTableViewCell.swift in Sources */,
 				9DA9386E298E5521005A9B66 /* CharacterListBuilder.swift in Sources */,
 				9DA9387A298E5766005A9B66 /* Builder.swift in Sources */,

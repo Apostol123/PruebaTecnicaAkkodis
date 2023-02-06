@@ -28,12 +28,12 @@ extension CharacterDetailPresenter: CharacterDetailPresenterProtocol {
     }
     
     func loadCellEpisodeData(for url: String, completion: @escaping (CharacterEpisode) -> Void) {
-        interactor.getEpisode(url: url) { result in
+        interactor.getEpisode(url: url) {[weak self] result in
             switch result {
             case .success(let episode):
                 completion(episode)
             case .failure(_):
-                break
+                self?.view?.addNoDataView(description: nil)
             }
         }
     }

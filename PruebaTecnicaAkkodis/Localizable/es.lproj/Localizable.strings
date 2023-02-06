@@ -6,3 +6,4 @@
 "lng.common.airdate" = "Lanzamiento: @";
 "lng.common.chapter.number" = "Capitulo: @";
 "lng.character.state" = "Estado: @";
+"lng.common.noDataView.message" = "Contenido no disponible intentelo más tarde profavor";
