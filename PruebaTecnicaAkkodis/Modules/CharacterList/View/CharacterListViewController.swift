@@ -44,7 +44,7 @@ class CharacterListViewController: UIViewController {
         tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
         tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
     }
 }
 
@@ -63,8 +63,9 @@ extension CharacterListViewController: UITableViewDataSource, UITableViewDelegat
         let item = content[indexPath.row]
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CharacterListTableViewCell.identifier, for: indexPath) as?  CharacterListTableViewCell else {return UITableViewCell()}
         cell.configure(
-            titleDescription: "lng.character.name".localized.replacingOccurrences(of: "@", with: item.name),
+            title: "lng.character.name".localized.replacingOccurrences(of: "@", with: item.name),
             description:  "lng.character.species".localized.replacingOccurrences(of: "@", with: item.species.rawValue),
+            state: "lng.character.state".localized.replacingOccurrences(of: "@", with: item.status),
             imageURL: item.image)
         return cell
     }

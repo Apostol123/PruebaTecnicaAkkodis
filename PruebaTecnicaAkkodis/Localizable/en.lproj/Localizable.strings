@@ -5,3 +5,4 @@
 "lng.common.name" = "Name: @";
 "lng.common.airdate" = "Airdate: @";
 "lng.common.chapter.number" = "Chapter number: @";
+"lng.character.state" = "State: @";

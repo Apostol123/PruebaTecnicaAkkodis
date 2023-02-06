@@ -16,8 +16,10 @@ class CharacterDetailViewController: UIViewController {
     
     private lazy var characterImage: UIImageView = {
         let image = UIImageView()
-        image.contentMode = .scaleAspectFit
+        image.contentMode = .scaleAspectFill
         image.heightAnchor.constraint(equalToConstant: view.frame.height / 3).isActive = true
+        image.layer.masksToBounds = true
+        image.layer.cornerRadius = 32
         return image
     }()
     

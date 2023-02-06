@@ -17,7 +17,7 @@ struct Info: Codable {
 struct Character: Codable {
     let id: Int
     let name: String
-    let status: Status
+    let status: String
     let species: Species
     let type: String
     let gender: Gender
