@@ -46,9 +46,13 @@
 		9DA93889298E5EB7005A9B66 /* CharacterListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA93888298E5EB7005A9B66 /* CharacterListTableViewCell.swift */; };
 		9DCC04902991AD0E008930D1 /* NoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCC048F2991AD0E008930D1 /* NoDataView.swift */; };
 		9DCC04922991AE0B008930D1 /* SetupNoDataViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCC04912991AE0B008930D1 /* SetupNoDataViewLayout.swift */; };
+		E5ABA502D5EBA2D241B63ABF /* Pods_PruebaTecnicaAkkodis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B409DE1A2D34E5CBB69D861 /* Pods_PruebaTecnicaAkkodis.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B409DE1A2D34E5CBB69D861 /* Pods_PruebaTecnicaAkkodis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PruebaTecnicaAkkodis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		500B54662BD3CEF003A3FAAD /* Pods-PruebaTecnicaAkkodis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PruebaTecnicaAkkodis.release.xcconfig"; path = "Target Support Files/Pods-PruebaTecnicaAkkodis/Pods-PruebaTecnicaAkkodis.release.xcconfig"; sourceTree = "<group>"; };
+		84652CB2FDD8A25A6358A47C /* Pods-PruebaTecnicaAkkodis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PruebaTecnicaAkkodis.debug.xcconfig"; path = "Target Support Files/Pods-PruebaTecnicaAkkodis/Pods-PruebaTecnicaAkkodis.debug.xcconfig"; sourceTree = "<group>"; };
 		9D79D5A6298E64A50048F80E /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		9D79D5AA298E65CC0048F80E /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		9D79D5AC298E699B0048F80E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -99,12 +103,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5ABA502D5EBA2D241B63ABF /* Pods_PruebaTecnicaAkkodis.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		725AC7787EB6F4980E3B540A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B409DE1A2D34E5CBB69D861 /* Pods_PruebaTecnicaAkkodis.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9D79D5A5298E649B0048F80E /* Endpoint */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +216,8 @@
 			children = (
 				9DA93848298E520B005A9B66 /* PruebaTecnicaAkkodis */,
 				9DA93847298E520B005A9B66 /* Products */,
+				EB2D486D885E199B1EA12094 /* Pods */,
+				725AC7787EB6F4980E3B540A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -368,6 +383,16 @@
 			path = NoDataView;
 			sourceTree = "<group>";
 		};
+		EB2D486D885E199B1EA12094 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				84652CB2FDD8A25A6358A47C /* Pods-PruebaTecnicaAkkodis.debug.xcconfig */,
+				500B54662BD3CEF003A3FAAD /* Pods-PruebaTecnicaAkkodis.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -375,17 +400,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9DA9385A298E520D005A9B66 /* Build configuration list for PBXNativeTarget "PruebaTecnicaAkkodis" */;
 			buildPhases = (
+				82733E470933996B76F0F9D6 /* [CP] Check Pods Manifest.lock */,
 				9DA93842298E520A005A9B66 /* Sources */,
 				9DA93843298E520A005A9B66 /* Frameworks */,
 				9DA93844298E520A005A9B66 /* Resources */,
+				171C915D8159822813F44D39 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = PruebaTecnicaAkkodis;
-			packageProductDependencies = (
-			);
 			productName = PruebaTecnicaAkkodis;
 			productReference = 9DA93846298E520B005A9B66 /* PruebaTecnicaAkkodis.app */;
 			productType = "com.apple.product-type.application";
@@ -415,8 +440,6 @@
 				es,
 			);
 			mainGroup = 9DA9383D298E520A005A9B66;
-			packageReferences = (
-			);
 			productRefGroup = 9DA93847298E520B005A9B66 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -438,6 +461,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		171C915D8159822813F44D39 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PruebaTecnicaAkkodis/Pods-PruebaTecnicaAkkodis-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PruebaTecnicaAkkodis/Pods-PruebaTecnicaAkkodis-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PruebaTecnicaAkkodis/Pods-PruebaTecnicaAkkodis-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82733E470933996B76F0F9D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PruebaTecnicaAkkodis-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9DA93842298E520A005A9B66 /* Sources */ = {
@@ -625,6 +690,7 @@
 		};
 		9DA9385B298E520D005A9B66 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84652CB2FDD8A25A6358A47C /* Pods-PruebaTecnicaAkkodis.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -652,6 +718,7 @@
 		};
 		9DA9385C298E520D005A9B66 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 500B54662BD3CEF003A3FAAD /* Pods-PruebaTecnicaAkkodis.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
