@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9D79D5A4298E61670048F80E /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 9D79D5A3298E61670048F80E /* SDWebImage */; };
 		9D79D5A7298E64A50048F80E /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D79D5A6298E64A50048F80E /* Endpoint.swift */; };
 		9D79D5AB298E65CC0048F80E /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D79D5AA298E65CC0048F80E /* Loader.swift */; };
 		9D79D5B0298E6A0B0048F80E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9D79D5B2298E6A0B0048F80E /* Localizable.strings */; };
@@ -100,7 +99,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D79D5A4298E61670048F80E /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,7 +385,6 @@
 			);
 			name = PruebaTecnicaAkkodis;
 			packageProductDependencies = (
-				9D79D5A3298E61670048F80E /* SDWebImage */,
 			);
 			productName = PruebaTecnicaAkkodis;
 			productReference = 9DA93846298E520B005A9B66 /* PruebaTecnicaAkkodis.app */;
@@ -409,7 +406,7 @@
 				};
 			};
 			buildConfigurationList = 9DA93841298E520A005A9B66 /* Build configuration list for PBXProject "PruebaTecnicaAkkodis" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -419,7 +416,6 @@
 			);
 			mainGroup = 9DA9383D298E520A005A9B66;
 			packageReferences = (
-				9D79D5A2298E61670048F80E /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 9DA93847298E520B005A9B66 /* Products */;
 			projectDirPath = "";
@@ -703,25 +699,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		9D79D5A2298E61670048F80E /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		9D79D5A3298E61670048F80E /* SDWebImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9D79D5A2298E61670048F80E /* XCRemoteSwiftPackageReference "SDWebImage" */;
-			productName = SDWebImage;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9DA9383E298E520A005A9B66 /* Project object */;
 }
