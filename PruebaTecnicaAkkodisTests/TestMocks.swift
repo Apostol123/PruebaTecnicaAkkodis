@@ -227,3 +227,19 @@ class CharacterListViewProtocolMock: CharacterListViewProtocol {
     }
 
 }
+
+extension DtoCharacterList {
+    static func emptyStub() -> DtoCharacterList {
+        return DtoCharacterList(info: Info(count: 0, pages: 0, next: "", prev: nil), results: [])
+    }
+    
+    static func characterStub() -> DtoCharacterList {
+        return DtoCharacterList(info: Info(count: 0, pages: 0, next: "", prev: nil), results: [Character.emptyStub()])
+    }
+}
+                                                                                               
+extension Character {
+    static func emptyStub() -> Character {
+        return Character(id: 0, name: "", status: "", species: Species.human, type: "", gender: Gender.male, origin: Location(name: "", url: ""), location: Location(name: "", url: ""), image: "", episode: [], url: "", created: "")
+    }
+}
