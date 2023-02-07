@@ -16,7 +16,7 @@ class CharacterDetailDataManager: CharacterDetailDataManagerProtocol {
     
     func getEpisode(url: String, completion: @escaping (Result<CharacterEpisode, APIError>) -> Void) {
         if serviceProxy.shouldPerformTask(for: url) {
-            serviceProxy.getItem(url: url, type: CharacterEpisode.self) { result in
+            serviceProxy.getItem(shouldTrackTask: true, url: url, type: CharacterEpisode.self) { result in
                 switch result {
                 case .success(let episode):
                     completion(.success(episode))

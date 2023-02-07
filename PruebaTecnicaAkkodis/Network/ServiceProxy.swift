@@ -17,7 +17,7 @@ class ServiceProxy {
         self.session = .shared
     }
     
-    func getItem<T: Decodable>(url: String, type: T.Type, queue: DispatchQueue = .main, completion: @escaping (Result<T, APIError>) -> Void) {
+    func getItem<T: Decodable>(shouldTrackTask: Booll = false, url: String, type: T.Type, queue: DispatchQueue = .main, completion: @escaping (Result<T, APIError>) -> Void) {
         
         let url = URL(string: url)
         
@@ -58,7 +58,9 @@ class ServiceProxy {
         }
         
         task.resume()
-        tasks.append(task)
+        if shouldTrackTask {
+            tasks.append(task)
+        }
     }
     
     func cancelTask(for url: String) {
