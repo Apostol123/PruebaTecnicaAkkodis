@@ -1,10 +1,3 @@
-//
-//  PruebaTecnicaAkkodisTests.swift
-//  PruebaTecnicaAkkodisTests
-//
-//  Created by Apostol, Alexandru on 7/2/23.
-//
-
 import XCTest
 @testable import PruebaTecnicaAkkodis
 
@@ -25,11 +18,6 @@ final class CharacterListPresenterTest: XCTestCase {
         mockView = nil
         mockInteractor = nil
         sut = nil
-    }
-    
-    func test_viewDidLoad_WhenMethodIsCalled_ViewShowLoaderIsCalled() {
-        sut.viewDidLoad()
-        XCTAssertTrue(mockView.showLoaderCalled)
     }
     
     func test_viewDidLoad_WhenMethodIsCalled_then_ViewShowLoaderIsCalled() {

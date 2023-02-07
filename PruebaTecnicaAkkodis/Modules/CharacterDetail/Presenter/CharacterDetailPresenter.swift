@@ -22,18 +22,18 @@ extension CharacterDetailPresenter: CharacterDetailPresenterProtocol {
             case .success(let character):
                 self?.view?.layout(with: character)
             case .failure(let failure):
-                print(failure)
+                self?.view?.addNoDataView(description: nil)
             }
         }
     }
     
     func loadCellEpisodeData(for url: String, completion: @escaping (CharacterEpisode) -> Void) {
-        interactor.getEpisode(url: url) {[weak self] result in
+        interactor.getEpisode(url: url) {result in
             switch result {
             case .success(let episode):
                 completion(episode)
             case .failure(_):
-                self?.view?.addNoDataView(description: nil)
+                break
             }
         }
     }
