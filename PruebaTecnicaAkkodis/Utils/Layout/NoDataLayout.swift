@@ -2,7 +2,7 @@ import UIKit
 
 protocol NoDataLayout: AnyObject {
     func addNoDataView(description: String?)
-    func removeView()
+    func removeNoDataView()
 }
 
 extension NoDataLayout where Self: UIViewController {
@@ -26,7 +26,7 @@ extension NoDataLayout where Self: UIViewController {
         
     }
     
-    func removeView() {
+    func removeNoDataView() {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else {return}
             self.view.subviews.first(where: {$0.tag == 3009})?.removeFromSuperview()

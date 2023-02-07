@@ -8,4 +8,7 @@ target 'PruebaTecnicaAkkodis' do
   # Pods for PruebaTecnicaAkkodis
   pod 'SDWebImage', '~> 5.0'
 
+  target 'PruebaTecnicaAkkodisTest' do
+      pod 'SDWebImage', '~> 5.0'
+  end
 end

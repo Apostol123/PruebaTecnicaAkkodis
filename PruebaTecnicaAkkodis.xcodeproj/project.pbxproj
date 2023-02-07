@@ -45,9 +45,21 @@
 		9DA93885298E5D9E005A9B66 /* DtoCharacterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA93884298E5D9E005A9B66 /* DtoCharacterList.swift */; };
 		9DA93889298E5EB7005A9B66 /* CharacterListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA93888298E5EB7005A9B66 /* CharacterListTableViewCell.swift */; };
 		9DCC04902991AD0E008930D1 /* NoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCC048F2991AD0E008930D1 /* NoDataView.swift */; };
-		9DCC04922991AE0B008930D1 /* SetupNoDataViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCC04912991AE0B008930D1 /* SetupNoDataViewLayout.swift */; };
+		9DCC04922991AE0B008930D1 /* NoDataLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCC04912991AE0B008930D1 /* NoDataLayout.swift */; };
+		9DCC04A92991BF3E008930D1 /* PruebaTecnicaAkkodisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCC04A82991BF3E008930D1 /* PruebaTecnicaAkkodisTests.swift */; };
+		9DCC04B029922D46008930D1 /* TestMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCC04AF29922D46008930D1 /* TestMocks.swift */; };
 		E5ABA502D5EBA2D241B63ABF /* Pods_PruebaTecnicaAkkodis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B409DE1A2D34E5CBB69D861 /* Pods_PruebaTecnicaAkkodis.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9DCC04AA2991BF3E008930D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9DA9383E298E520A005A9B66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DA93845298E520A005A9B66;
+			remoteInfo = PruebaTecnicaAkkodis;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0B409DE1A2D34E5CBB69D861 /* Pods_PruebaTecnicaAkkodis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PruebaTecnicaAkkodis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,7 +107,10 @@
 		9DA93884298E5D9E005A9B66 /* DtoCharacterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoCharacterList.swift; sourceTree = "<group>"; };
 		9DA93888298E5EB7005A9B66 /* CharacterListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListTableViewCell.swift; sourceTree = "<group>"; };
 		9DCC048F2991AD0E008930D1 /* NoDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataView.swift; sourceTree = "<group>"; };
-		9DCC04912991AE0B008930D1 /* SetupNoDataViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupNoDataViewLayout.swift; sourceTree = "<group>"; };
+		9DCC04912991AE0B008930D1 /* NoDataLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataLayout.swift; sourceTree = "<group>"; };
+		9DCC04A62991BF3E008930D1 /* PruebaTecnicaAkkodisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PruebaTecnicaAkkodisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DCC04A82991BF3E008930D1 /* PruebaTecnicaAkkodisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PruebaTecnicaAkkodisTests.swift; sourceTree = "<group>"; };
+		9DCC04AF29922D46008930D1 /* TestMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMocks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +119,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5ABA502D5EBA2D241B63ABF /* Pods_PruebaTecnicaAkkodis.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DCC04A32991BF3E008930D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				9D79D5A6298E64A50048F80E /* Endpoint.swift */,
-				9D79D5ED298FC0100048F80E /* CharacterEpisode.swift */,
 			);
 			path = Endpoint;
 			sourceTree = "<group>";
@@ -141,7 +162,7 @@
 			children = (
 				9D79D5AA298E65CC0048F80E /* Loader.swift */,
 				9D79D5EF298FCC310048F80E /* ContentSizedTableView.swift */,
-				9DCC04912991AE0B008930D1 /* SetupNoDataViewLayout.swift */,
+				9DCC04912991AE0B008930D1 /* NoDataLayout.swift */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -215,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				9DA93848298E520B005A9B66 /* PruebaTecnicaAkkodis */,
+				9DCC04A72991BF3E008930D1 /* PruebaTecnicaAkkodisTests */,
 				9DA93847298E520B005A9B66 /* Products */,
 				EB2D486D885E199B1EA12094 /* Pods */,
 				725AC7787EB6F4980E3B540A /* Frameworks */,
@@ -225,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				9DA93846298E520B005A9B66 /* PruebaTecnicaAkkodis.app */,
+				9DCC04A62991BF3E008930D1 /* PruebaTecnicaAkkodisTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -344,6 +367,7 @@
 		9DA93883298E5D84005A9B66 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				9D79D5ED298FC0100048F80E /* CharacterEpisode.swift */,
 				9DA93884298E5D9E005A9B66 /* DtoCharacterList.swift */,
 			);
 			path = Entities;
@@ -383,13 +407,21 @@
 			path = NoDataView;
 			sourceTree = "<group>";
 		};
+		9DCC04A72991BF3E008930D1 /* PruebaTecnicaAkkodisTests */ = {
+			isa = PBXGroup;
+			children = (
+				9DCC04A82991BF3E008930D1 /* PruebaTecnicaAkkodisTests.swift */,
+				9DCC04AF29922D46008930D1 /* TestMocks.swift */,
+			);
+			path = PruebaTecnicaAkkodisTests;
+			sourceTree = "<group>";
+		};
 		EB2D486D885E199B1EA12094 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				84652CB2FDD8A25A6358A47C /* Pods-PruebaTecnicaAkkodis.debug.xcconfig */,
 				500B54662BD3CEF003A3FAAD /* Pods-PruebaTecnicaAkkodis.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -415,6 +447,24 @@
 			productReference = 9DA93846298E520B005A9B66 /* PruebaTecnicaAkkodis.app */;
 			productType = "com.apple.product-type.application";
 		};
+		9DCC04A52991BF3E008930D1 /* PruebaTecnicaAkkodisTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DCC04AE2991BF3E008930D1 /* Build configuration list for PBXNativeTarget "PruebaTecnicaAkkodisTests" */;
+			buildPhases = (
+				9DCC04A22991BF3E008930D1 /* Sources */,
+				9DCC04A32991BF3E008930D1 /* Frameworks */,
+				9DCC04A42991BF3E008930D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9DCC04AB2991BF3E008930D1 /* PBXTargetDependency */,
+			);
+			name = PruebaTecnicaAkkodisTests;
+			productName = PruebaTecnicaAkkodisTests;
+			productReference = 9DCC04A62991BF3E008930D1 /* PruebaTecnicaAkkodisTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -427,6 +477,10 @@
 				TargetAttributes = {
 					9DA93845298E520A005A9B66 = {
 						CreatedOnToolsVersion = 14.0;
+					};
+					9DCC04A52991BF3E008930D1 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = 9DA93845298E520A005A9B66;
 					};
 				};
 			};
@@ -445,6 +499,7 @@
 			projectRoot = "";
 			targets = (
 				9DA93845298E520A005A9B66 /* PruebaTecnicaAkkodis */,
+				9DCC04A52991BF3E008930D1 /* PruebaTecnicaAkkodisTests */,
 			);
 		};
 /* End PBXProject section */
@@ -457,6 +512,13 @@
 				9DA93856298E520D005A9B66 /* LaunchScreen.storyboard in Resources */,
 				9D79D5B0298E6A0B0048F80E /* Localizable.strings in Resources */,
 				9DA93853298E520D005A9B66 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DCC04A42991BF3E008930D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,7 +590,7 @@
 				9DA9386D298E5521005A9B66 /* CharacterListViewController.swift in Sources */,
 				9DA9387C298E588E005A9B66 /* Coordinator.swift in Sources */,
 				9D79D5DC298FABAA0048F80E /* CharacterDetailInteractorProtocol.swift in Sources */,
-				9DCC04922991AE0B008930D1 /* SetupNoDataViewLayout.swift in Sources */,
+				9DCC04922991AE0B008930D1 /* NoDataLayout.swift in Sources */,
 				9D79D5EC298FB76F0048F80E /* CharacterEpisodeTableViewCell.swift in Sources */,
 				9DA9386E298E5521005A9B66 /* CharacterListBuilder.swift in Sources */,
 				9DA9387A298E5766005A9B66 /* Builder.swift in Sources */,
@@ -548,7 +610,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9DCC04A22991BF3E008930D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DCC04A92991BF3E008930D1 /* PruebaTecnicaAkkodisTests.swift in Sources */,
+				9DCC04B029922D46008930D1 /* TestMocks.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9DCC04AB2991BF3E008930D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9DA93845298E520A005A9B66 /* PruebaTecnicaAkkodis */;
+			targetProxy = 9DCC04AA2991BF3E008930D1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9D79D5B2298E6A0B0048F80E /* Localizable.strings */ = {
@@ -744,6 +823,42 @@
 			};
 			name = Release;
 		};
+		9DCC04AC2991BF3E008930D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8DURMPUBZ2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.apostol.alex.PruebaTecnicaAkkodis.PruebaTecnicaAkkodisTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PruebaTecnicaAkkodis.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PruebaTecnicaAkkodis";
+			};
+			name = Debug;
+		};
+		9DCC04AD2991BF3E008930D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8DURMPUBZ2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.apostol.alex.PruebaTecnicaAkkodis.PruebaTecnicaAkkodisTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PruebaTecnicaAkkodis.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PruebaTecnicaAkkodis";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -761,6 +876,15 @@
 			buildConfigurations = (
 				9DA9385B298E520D005A9B66 /* Debug */,
 				9DA9385C298E520D005A9B66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DCC04AE2991BF3E008930D1 /* Build configuration list for PBXNativeTarget "PruebaTecnicaAkkodisTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DCC04AC2991BF3E008930D1 /* Debug */,
+				9DCC04AD2991BF3E008930D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
